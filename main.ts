@@ -38,8 +38,12 @@ function LOAD () {
     basic.clearScreen()
     basic.showIcon(IconNames.Happy)
 }
-LOAD()
+let if_num = 1
 basic.forever(function () {
+    if (if_num == 1) {
+        LOAD()
+    }
+    if_num = 0
     if (input.buttonIsPressed(Button.A)) {
         basic.showLeds(`
             . . . . .
